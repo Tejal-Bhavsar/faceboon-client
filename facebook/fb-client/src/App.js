@@ -1,22 +1,30 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Feed from './Feed'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Header from './Header.js';
+import NavbarComp from './NavbarComp';
+import Sidebar from './Sidebar';
+import Widges from './Widges'
 import LoginForm from './LoginForm'
-import SignUpForm from './SignUpForm'
+import './Loginsignup.css'
 
 function App() {
+  const user = "m";
   return (<Router>
-    <div className="App">
-      <div className="auth-wrapper">
-          <div className="auth-inner">
-            <Switch>
-              <Route exact path='/' component={LoginForm} />
-              <Route path="/sign-in" component={LoginForm} />
-              <Route path="/sign-up" component={SignUpForm} />
-            </Switch>
-          </div>
-      </div>
+    <div className="app">
+      {!user ?  <LoginForm /> : (
+      <>
+       <Header />
+       <div className="app__body">
+         <Sidebar />
+         <Feed />
+         <Widges />
+       </div>
+       </>
+        )}
     </div>
   </Router>
   );
