@@ -10,9 +10,12 @@ import Sidebar from './Sidebar';
 import Widges from './Widges'
 import LoginForm from './LoginForm'
 import './Loginsignup.css'
+import SignUpForm from './SignUpForm';
+import { useStateValue } from './StateProvider';
 
 function App() {
-  const user = "m";
+
+ const [{ user },dispatch] = useStateValue();
   return (<Router>
     <div className="app">
       {!user ?  <LoginForm /> : (

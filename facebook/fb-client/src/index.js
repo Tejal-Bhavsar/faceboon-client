@@ -5,11 +5,17 @@ import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 import NavbarComp from './NavbarComp';
+import { StateProvider } from './StateProvider';
+import reducer,{ initialState } from './Reducer';
  
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+   <StateProvider initialState={initialState} reducer={reducer}>
+     <App />
+   </StateProvider>
+   
+  
   </BrowserRouter>,
   document.getElementById('root')
 );

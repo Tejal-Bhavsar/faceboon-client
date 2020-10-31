@@ -5,28 +5,49 @@ import './MessageSender.css'
 import VideocamIcon from "@material-ui/icons/Videocam"
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary"
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
-import { SentimentSatisfied } from '@material-ui/icons';
+ 
+import { useStateValue } from './StateProvider'
+import db  from './Firebase';
+ 
+import * as firebase from 'firebase/app';
+ 
+ 
 
 
  const MessageSender = () => {
+    const [{ user }, dispatch] = useStateValue();
     const [input, setInput] = useState('')
-    const [imgUrl, setimgUrl] = useState('')
+    const [imageUrl, setImageUrl] = useState('')
+
      const handleSubmit = e => {
          e.preventDefault();
+
+          db.collection('posts').add({
+              message: input,
+              timestamp:  firebase.firestore.Timestamp.now().toDate(),
+              username: user.displayName,
+              profilePic: user.photoURL,
+              image: imageUrl,
+          })
+
+         setInput('');
+         setImageUrl('');
      }
+
+     
     return (
         <div className="messageSender">
             <div className="messageSender__top">
-                <Avatar />
+                <Avatar src={user.photoURL}/>
                 <form > 
                   <input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   className="messageSender__input"
-                   type="text" placeholder={`What's on  your  mind  tej  ?   `}/>
+                   type="text" placeholder={`What's on  your  mind, ${user.displayName}?   `}/>
                   <input
-                  value={imgUrl}
-                  onChange={(e) => (e.target.value)} type="text" placeholder="image URL (optional)" />
+                  value={imageUrl}
+                  onChange={(e) => setImageUrl(e.target.value)} type="text" placeholder="image URL (optional)" />
                   <button onClick={handleSubmit} type="submit"> Hidden submit</button>
                 </form>
 

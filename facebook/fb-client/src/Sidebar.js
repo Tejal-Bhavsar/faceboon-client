@@ -8,15 +8,18 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ChatIcon from '@material-ui/icons/Chat';
 import PeopleIcon from '@material-ui/icons/People';
 import { ExpandMoreOutlined } from '@material-ui/icons';
+import { useStateValue } from './StateProvider'
  
  
 
 
 function Sidebar() {
+    const [{ user }, dispatch] = useStateValue();
+
     return (
         <>
         <div className="sidebar">
-            <SidebarRow  src="https://www.flaticon.com/svg/static/icons/svg/53/53176.svg" title="tejal"/>
+            <SidebarRow  src={user.photoURL} title={user.displayName}/>
             <SidebarRow 
              Icon={LocalHospitalIcon}
              title="covid information centre"
