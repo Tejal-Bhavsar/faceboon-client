@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tejal-bhavsar-au6/faceboon-client/static/css/main.008e539c.chunk.css",
+    "main.js": "/tejal-bhavsar-au6/faceboon-client/static/js/main.26794a24.chunk.js",
+    "main.js.map": "/tejal-bhavsar-au6/faceboon-client/static/js/main.26794a24.chunk.js.map",
+    "runtime-main.js": "/tejal-bhavsar-au6/faceboon-client/static/js/runtime-main.6f243a47.js",
+    "runtime-main.js.map": "/tejal-bhavsar-au6/faceboon-client/static/js/runtime-main.6f243a47.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/tejal-bhavsar-au6/faceboon-client/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.b040fc9a.chunk.js": "/tejal-bhavsar-au6/faceboon-client/static/js/2.b040fc9a.chunk.js",
+    "static/js/2.b040fc9a.chunk.js.map": "/tejal-bhavsar-au6/faceboon-client/static/js/2.b040fc9a.chunk.js.map",
+    "index.html": "/tejal-bhavsar-au6/faceboon-client/index.html",
+    "precache-manifest.9161cca77a3a9853e874afd65f69d697.js": "/tejal-bhavsar-au6/faceboon-client/precache-manifest.9161cca77a3a9853e874afd65f69d697.js",
+    "service-worker.js": "/tejal-bhavsar-au6/faceboon-client/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/tejal-bhavsar-au6/faceboon-client/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.008e539c.chunk.css.map": "/tejal-bhavsar-au6/faceboon-client/static/css/main.008e539c.chunk.css.map",
+    "static/js/2.b040fc9a.chunk.js.LICENSE.txt": "/tejal-bhavsar-au6/faceboon-client/static/js/2.b040fc9a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f243a47.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.b040fc9a.chunk.js",
+    "static/css/main.008e539c.chunk.css",
+    "static/js/main.26794a24.chunk.js"
+  ]
+}
